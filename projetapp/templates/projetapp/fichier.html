@@ -1,0 +1,15 @@
+<!-- votre_template.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liste des Mesures</title>
+</head>
+<body>
+    <h1>Liste des Mesures</h1>
+    <ul>
+        {% for mesure in mesures %}
+            <li>Humidité : {{ mesure.humidite }} - Timestamp : {{ mesure.timestamp }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
