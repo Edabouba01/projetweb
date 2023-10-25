@@ -1,0 +1,12 @@
+h1{
+    color: rgb(155, 11, 11);
+    text-size-adjust: 50px;
+    text-decoration-color: hsl(hue, saturation, lightness);
+    
+    display: inline;
+    margin: auto;
+    width: 100px;
+    
+    padding-top: 30px; ;
+    
+}

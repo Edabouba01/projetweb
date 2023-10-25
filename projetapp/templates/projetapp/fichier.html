@@ -1,15 +1,33 @@
 <!-- votre_template.html -->
 <!DOCTYPE html>
 <html>
+
+
+<html lang="fr">
 <head>
-    <title>Liste des Mesures</title>
+    <meta charset="UTF-8">
+    {% load static %}
+    <title>Votre Titre</title>
+    <link rel="stylesheet" href="{% static 'projetapp/styles.css' %}">
 </head>
 <body>
-    <h1>Liste des Mesures</h1>
-    <ul>
-        {% for mesure in mesures %}
-            <li>Humidité : {{ mesure.humidite }} - Timestamp : {{ mesure.timestamp }}</li>
-        {% endfor %}
-    </ul>
+
+    <div class="content-center:""">
+    
+        
+            
+            
+                <h1>Données Humidite</h1>
+                <h2>Total des donnee receuillit : {{ total_mesures }}</h2>
+                <ul>
+                    {% for mesure in mesures %}
+                        <li>ID: {{ mesure.0 }}, Humidité: {{ mesure.1 }}, Timestamp: {{ mesure.2 }}</li>
+                    {% endfor %}
+                </ul>
+            </section>
+        
+        </div>
+
 </body>
 </html>
+
