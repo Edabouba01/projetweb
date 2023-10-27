@@ -1,32 +1,91 @@
 <!-- votre_template.html -->
+
+
+
 <!DOCTYPE html>
-<html>
-
-
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     {% load static %}
-    <title>Votre Titre</title>
-    <link rel="stylesheet" href="{% static 'projetapp/styles.css' %}">
-</head>
-<body>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<>, initial-scale=1.0">
 
-    <div class="content-center:""">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+
+    <link rel="stylesheet" type="text/css " href= "{% static 'projetapp/style.css'%}">
+    <title>organiser le formulaire de sorte à avoir plusieurs categories</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables.net-buttons-bs/2.2.0/buttons.bootstrap.min.js" integrity="sha512-q16bwwxHypOj331sH082m1caiMj5d2eZxGqk0ytNHzNovIUTv78bOI5xq3PerSwTKZnBoTAmct8gZfNQVcDYiA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+
+</head>
+<div>
+<body>
+  <!--Navigateur-->
+  <div class="row my-row">
+    <div class="col my-col">
+      <nav class="navbar navbar-expand navbar-dark bg-dark fixed-top">
+        
+        <span class="navbar-text"> -Projet1 Phase3 django  </td></span>
+        <div class="collapse navbar-collapse"></div>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" 
+              ><i class="fas fa-home"></i> Accueil</a
+            >
+          
+          
+          </li>
+          <li class="nav-item ">
+            <a class="nav-link" 
+              ><i class="fas fa-address-book"></i> Nous contacter</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div><br><br>
+  
+  <br><br>
+
+  
+  <h1>Données Humidite</h1>
+     
+  <h2>Total des donnee receuillit : {{ total_mesures }}</h2>
+
     
         
             
             
-                <h1>Données Humidite</h1>
-                <h2>Total des donnee receuillit : {{ total_mesures }}</h2>
-                <ul>
-                    {% for mesure in mesures %}
-                        <li>ID: {{ mesure.0 }}, Humidité: {{ mesure.1 }}, Timestamp: {{ mesure.2 }}</li>
-                    {% endfor %}
-                </ul>
-            </section>
-        
-        </div>
+  <div class="center-table">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Humidité</th>
+            <th>Timestamp</th>
+        </tr>
+        {% for mesure in mesures %}
+            <tr>
+                <td>{{ mesure.0 }}</td>
+                <td>{{ mesure.1 }}</td>
+                <td>{{ mesure.2 }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+</section>
+
+
+      
+</div>  
+      
+</div>
 
 </body>
 </html>

@@ -1,3 +1,4 @@
+
 h1{
     color: rgb(155, 11, 11);
     text-size-adjust: 50px;
@@ -10,3 +11,19 @@ h1{
     padding-top: 30px; ;
     
 }
+h2{
+    color: rgb(179, 45, 16);
+}
+
+body{background-image: url(https://th.bing.com/th/id/R.22755da58c7dcc4abfbbe5e9a29a67d2?rik=ulGcQwkk8HlcWg&pid=ImgRaw&r=0);
+    text-align: center;}
+    .center-table {
+        margin:auto; 
+        width: 90%; 
+        
+    }
+    
+    .center-table th, .center-table td {
+        padding: 20px; 
+        width: 40.5%; 
+    }
